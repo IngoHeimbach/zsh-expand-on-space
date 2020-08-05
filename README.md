@@ -11,7 +11,7 @@ machines where your aliases are not defined) and you get a command history which
 
 **Example:**
 
-Without this plugin, you could have defined an alias `gds` for `git diff --staged`. With this plugin, you can define 
+Without this plugin, you could have defined an alias `gds` for `git diff --staged`. With this plugin, you can define
 `g` to expand to `git`, `git d` to `git diff` and `git diff -s` to `git diff --staged`. Then, you can type
 
 ```
@@ -30,7 +30,7 @@ as fully written command on the command line.
 
 ### Using zplug
 
-Add `zplug "IngoHeimbach/zsh-expand-on-space"` to your `.zshrc`.
+Add `zplug "IngoMeyer441/zsh-expand-on-space"` to your `.zshrc`.
 
 ### Manual
 
