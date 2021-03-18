@@ -1,11 +1,11 @@
 function _expand-on-space {
-    local new_line
     if [[ -n "${EXPAND_ON_SPACE_ACCEPT[(r)${BUFFER}]}" ]]; then
         zle accept-line
     elif (( ${+EXPAND_ON_SPACE[${BUFFER}]} )); then
-        new_line="${EXPAND_ON_SPACE[${BUFFER}]} "    # ${BUFFER} is changed after line kill
-        zle kill-whole-line
-        zle -U "${new_line}"
+        LBUFFER="${EXPAND_ON_SPACE[${BUFFER}]} "
+        if command -v "_zsh_highlight" >/dev/null 2>&1; then
+            _zsh_highlight
+        fi
     else
         zle magic-space
     fi
